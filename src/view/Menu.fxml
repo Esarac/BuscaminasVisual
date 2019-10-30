@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane id="BorderPane" blendMode="SRC_OVER" cache="false" disable="false" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" pickOnBounds="true" prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ControlMenu">
+  <center>
+    <VBox alignment="CENTER" blendMode="SRC_OVER" prefHeight="300.0" prefWidth="257.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <children>
+        <Button fx:id="easy" cache="true" cacheHint="DEFAULT" cancelButton="false" contentDisplay="CENTER" defaultButton="false" disable="false" ellipsisString="" focusTraversable="true" graphicTextGap="0.0" mnemonicParsing="false" mouseTransparent="false" onAction="#loadEasy" opacity="1.0" pickOnBounds="false" prefWidth="102.0" text="Easy" textAlignment="CENTER" textFill="BLACK" textOverrun="ELLIPSIS" underline="false" visible="true">
+          <font>
+            <Font name="Impact" size="20.0" fx:id="x1" />
+          </font>
+        </Button>
+        <Button fx:id="normal" defaultButton="false" font="$x1" mnemonicParsing="false" onAction="#loadNormal" prefWidth="102.0" text="Normal" textAlignment="CENTER" />
+        <Button fx:id="hard" defaultButton="false" font="$x1" mnemonicParsing="false" onAction="#loadHard" prefWidth="102.0" text="Hard" textAlignment="CENTER" />
+      </children>
+      <padding>
+        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" fx:id="x2" />
+      </padding>
+      <BorderPane.margin>
+        <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+      </BorderPane.margin>
+    </VBox>
+  </center>
+  <padding>
+    <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" fx:id="x2" />
+  </padding>
+</BorderPane>

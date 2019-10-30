@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane id="BorderPane" fx:id="pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ControlMinesweeper">
+  <bottom>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <children>
+        <Button fx:id="clue" contentDisplay="CENTER" defaultButton="false" mnemonicParsing="false" onAction="#clue" text="Clue" textAlignment="CENTER" underline="false" wrapText="false" />
+        <Button fx:id="solve" contentDisplay="CENTER" mnemonicParsing="false" onAction="#solve" text="Solve" textAlignment="CENTER" />
+        <Button fx:id="back" contentDisplay="CENTER" disable="false" mnemonicParsing="false" onAction="#back" prefHeight="-1.0" prefWidth="-1.0" text="Back" textAlignment="CENTER" visible="true" wrapText="false" HBox.hgrow="NEVER" />
+      </children>
+    </HBox>
+  </bottom>
+  <padding>
+    <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+  </padding>
+  <top>
+    <Label fx:id="label" text="XTREME MINESWEEPER" textAlignment="CENTER" textFill="BLACK" BorderPane.alignment="CENTER">
+      <font>
+        <Font name="Impact" size="30.0" />
+      </font>
+    </Label>
+  </top>
+</BorderPane>

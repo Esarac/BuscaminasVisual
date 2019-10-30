@@ -1,0 +1,61 @@
+#BorderPane{
+	-fx-background-image:url(../../img/background.gif);
+  	-fx-background-position:center;
+  	-fx-background-repeat: no-repeat;
+  	-fx-background-color:#030303;
+}
+
+.label{
+	-fx-text-fill:linear-gradient(to right, Yellow, DarkOrange, Red, DarkViolet, Blue, Lime);
+	
+	-fx-font-family:Impact;
+	-fx-font-size:50;
+	-fx-font-weight:bold;
+}
+.win{-fx-text-fill:linear-gradient(to bottom right, DarkViolet, Blue, Teal, Lime);}
+.lose{-fx-text-fill:linear-gradient(to bottom right, Black, Red, Orange, Yellow);}
+
+.button{
+	text:white;
+	border:white;
+	background:transparent;
+	
+	-fx-background-color:background;
+	-fx-text-fill:text;
+	-fx-border-color:border;
+	
+	-fx-font-family:Impact;
+	-fx-font-size:20;
+	-fx-font-weight:bold;
+	
+	-fx-background-position:center;
+  	-fx-background-repeat: no-repeat;
+  	-fx-background-size:contain;
+}
+.button:hover{background:linear-gradient(to bottom right, Blue, transparent);}
+.button:pressed{background:linear-gradient(to bottom right, Indigo, transparent);}
+
+.f0{text:Blue;}
+.f1{text:Lime;}
+.f2{text:Yellow;}
+.f3{text:Red;}
+.f4{text:Magenta;}
+.f5{text:DarkOrange;}
+.f6{text:DarkViolet;}
+.f7{text:SaddleBrown;}
+.f8{text:Silver;}
+.mine{
+	-fx-background-image:url(../../img/mine1.gif);
+  	-fx-background-size:100% 100%;
+}
+.flag{
+	-fx-background-image:url(../../img/flag.gif);
+}
+
+
+#easy:hover{background:linear-gradient(to bottom right, Lime, transparent);}
+#easy:pressed{background:linear-gradient(to bottom right, Green, transparent);}
+#normal:hover{background:linear-gradient(to bottom right, Magenta, transparent);}
+#normal:pressed{background:linear-gradient(to bottom right, Purple, transparent);}
+#hard:hover{background:linear-gradient(to bottom right, DarkOrange, transparent);}
+#hard:pressed{background:linear-gradient(to bottom right, Brown, transparent);}
