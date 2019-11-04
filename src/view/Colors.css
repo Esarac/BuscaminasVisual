@@ -1,5 +1,5 @@
 #BorderPane{
-	-fx-background-image:url(../../img/background.gif);
+	-fx-background-image:url(../../mda/images/background.gif);
   	-fx-background-position:center;
   	-fx-background-repeat: no-repeat;
   	-fx-background-color:#030303;
@@ -7,7 +7,6 @@
 
 .label{
 	-fx-text-fill:linear-gradient(to right, Yellow, DarkOrange, Red, DarkViolet, Blue, Lime);
-	
 	-fx-font-family:Impact;
 	-fx-font-size:50;
 	-fx-font-weight:bold;
@@ -30,7 +29,7 @@
 	
 	-fx-background-position:center;
   	-fx-background-repeat: no-repeat;
-  	-fx-background-size:contain;
+  	
 }
 .button:hover{background:linear-gradient(to bottom right, Blue, transparent);}
 .button:pressed{background:linear-gradient(to bottom right, Indigo, transparent);}
@@ -45,11 +44,12 @@
 .f7{text:SaddleBrown;}
 .f8{text:Silver;}
 .mine{
-	-fx-background-image:url(../../img/mine1.gif);
+	-fx-background-image:url(../../mda/images/mine.gif);
   	-fx-background-size:100% 100%;
 }
 .flag{
-	-fx-background-image:url(../../img/flag.gif);
+	-fx-background-image:url(../../mda/images/flag.gif);
+	-fx-background-size:contain;
 }
 
 

@@ -18,6 +18,9 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.RowConstraints;
+import javafx.scene.media.AudioClip;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import model.Buscaminas;
 import model.Casilla;
@@ -40,6 +43,7 @@ public class ControlMinesweeper implements Initializable{
 	private Button solve;
 	@FXML
 	private Button back;
+	private AudioClip sound;
 
 	//On Action
 	public void clue() {
@@ -50,6 +54,10 @@ public class ControlMinesweeper implements Initializable{
 				label.setText("YOU WIN!");
 			}
 		}
+		//Sound
+		sound=new AudioClip("file:mda/sounds/clue.mp3");
+		sound.play();
+		//...
 	}
 	
 	public void solve(){
@@ -57,6 +65,10 @@ public class ControlMinesweeper implements Initializable{
 			minesweeper.resolver();
 			showFields();
 		}
+		//Sound
+		sound=new AudioClip("file:mda/sounds/solve.mp3");
+		sound.play();
+		//...
 	}
 	
 	public void back(ActionEvent e){
@@ -66,6 +78,10 @@ public class ControlMinesweeper implements Initializable{
 			root.getStylesheets().add("/view/Colors.css");//CSS
 			Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 			stage.setScene(new Scene(root));
+			//Sound
+			sound=new AudioClip("file:mda/sounds/change.mp3");
+			sound.play();
+			//...
 		}
 		catch (Exception e1) {
 			e1.printStackTrace();
@@ -130,17 +146,25 @@ public class ControlMinesweeper implements Initializable{
 		if(e.getButton()==MouseButton.PRIMARY){
 			minesweeper.abrirCasilla(x,y);
 			if(minesweeper.darPerdio()){
-				label.getStyleClass().add("lose");//Style
 				label.setText("YOU LOSE!");
+				sound=new AudioClip("file:mda/sounds/lose.mp3");//Sound
+				label.getStyleClass().add("lose");//Style
 			}
 			else if(minesweeper.gano()){
 				label.setText("YOU WIN!");
+				sound=new AudioClip("file:mda/sounds/win.mp3");//Sound
 				label.getStyleClass().add("win");//Style
+			}
+			else{
+				sound=new AudioClip("file:mda/sounds/open.mp3");//Sound
 			}
 		}
 		else if(e.getButton()==MouseButton.SECONDARY){
 			minesweeper.marcar(x,y);
+			sound=new AudioClip("file:mda/sounds/flag.mp3");//Sound
+			
 		}
+		sound.play();//Sound
 	}
 	
 		//Style(On Action)

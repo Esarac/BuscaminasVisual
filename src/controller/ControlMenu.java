@@ -11,6 +11,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 import model.Buscaminas;
 
@@ -41,8 +42,7 @@ public class ControlMenu implements Initializable{
 	//Methods...
 		//Initialize
 	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		
+	public void initialize(URL location, ResourceBundle resources){
 	}
 	
 		//Load
@@ -58,6 +58,11 @@ public class ControlMenu implements Initializable{
 			
 			Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 			stage.setScene(new Scene(root));
+			
+			//Sound
+			AudioClip sound=new AudioClip("file:mda/sounds/change.mp3");
+			sound.play();
+			//...
 		}
 		catch (Exception ex) {
 			ex.printStackTrace();
